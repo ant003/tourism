@@ -1,11 +1,11 @@
 import noImage from "./img/noImage.png";
 
-const Square = () =>{
+const Square = ({square}) =>{
     return (
         <div className="square">
             <img src={noImage} alt="noImage"></img>
-            <h2>Place 1</h2>
-            <p>This is a lovely place</p>
+            <h2>{square.name}</h2>
+            <p>{`${square.experience} + ${square.vehicle} + ${square.price}` }</p>
         </div>
     );
 }
