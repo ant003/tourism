@@ -45,21 +45,31 @@ h2 {
   margin: 10px;
 }
 
-/* || Navbar styles*/
+/* || Navbar and footer styles*/
 
-.navbar ul {
+.navbar ul, 
+  footer ul {
   list-style: none;
   display: flex;
+  justify-content: center;
 }
 
-.navbar ul li {
+.navbar ul li,
+  footer ul li {
   flex: 1;
   text-align: center;
 }
 
-.navbar ul li a {
+.navbar ul li a,
+  footer ul li a {
   font-size: 1.5rem;
 }
+
+.social li {
+  flex: initial;
+  margin-left: 10px;
+}
+
 
 
 
