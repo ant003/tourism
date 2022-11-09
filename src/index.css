@@ -40,36 +40,40 @@ h2 {
 .squareList {
   display: flex;
   flex-wrap: wrap;
-  max-width: 900px;
   gap: 10px;
-  margin: 10px;
+  justify-content: center;
+  flex: 1;
+  max-width: 900px;
 }
 
 /* || Navbar and footer styles*/
 
+.navbar {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.568);
+  padding: 4.5em;
+}
+
 .navbar ul, 
-  footer ul {
+  .footer ul {
   list-style: none;
   display: flex;
   justify-content: center;
-}
-
-.navbar ul li,
-  footer ul li {
-  flex: 1;
   text-align: center;
 }
 
-.navbar ul li a,
-  footer ul li a {
+.navbar a,
+  .footer a {
   font-size: 1.5rem;
+  margin: 0 2em;
 }
 
-.social li {
-  flex: initial;
-  margin-left: 10px;
-}
+/* || Content styles*/
 
+.content {
+  max-width: 900px;
+  margin: 4em auto;
+  padding: 20px;
+}
 
 
 
