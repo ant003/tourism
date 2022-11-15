@@ -1,8 +1,17 @@
 /*|| General styles*/
 
+@font-face {
+  font-family: 'bainsleyregular';
+  src: url('fonts/bainsley_roman-webfont.woff2') format('woff2'),
+       url('fonts/bainsley_roman-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   font-size: 10px;
+  font-family: 'bainsleyregular';
 }
 
 /*|| Square styles*/
@@ -18,7 +27,6 @@
 .square img {
   width: 100%;
   height: 65%;
-  margin-bottom: 5px;
 }
 
 .square h2 {
@@ -26,7 +34,7 @@
 }
 
 .square p {
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 .square 
@@ -63,9 +71,22 @@ h2 {
 
 .navbar a,
   .footer a {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin: 0 2em;
+  text-decoration: none;
+  font-weight:bolder;
+  color: rgb(43, 133, 43);
 }
+
+.navbar a:hover,
+  .footer a:hover {
+    color: rgb(117, 207, 117);
+  }
+
+.footer img {
+  font-size: 1em;
+}
+
 
 /* || Content styles*/
 
@@ -74,6 +95,5 @@ h2 {
   margin: 4em auto;
   padding: 20px;
 }
-
 
 
