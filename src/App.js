@@ -1,12 +1,12 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import SquareList from "./SquareList";
+import PlaceList from "./PlaceList";
 
 function App() {
     return (
         <div className="App">
             <Navbar/>
-            <SquareList/>
+            <PlaceList/>
             <Footer/>
         </div>
 
