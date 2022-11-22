@@ -108,3 +108,9 @@ h2 {
 .social a {
   margin: 0;
 }
+
+/*|| Home styles*/
+
+.home > div{
+  font-size: 2em;
+}
