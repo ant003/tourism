@@ -1,25 +1,13 @@
-import { useState, useEffect } from "react";
 import Square from "./Square";
 
-const PlaceList = () => {
-    const [places, setPlaces] = useState(null);
-
-    useEffect( () => {
-        fetch('http://localhost:8000/places')
-            .then( res =>  {
-                return res.json();
-            })
-            .then ( data => {
-                setPlaces(data);
-            })
-    },[]);
-
+const PlaceList = ( {places} ) => {
     return(
-        <div className="squareList" >
-            {places && places.map(square => (
-                <Square square={square} key={square.id} />
+            <div className="placeList" >
+            {places.map(place => (
+                <Square square={place} key={place.id} />
             ))}
         </div>
+
     );
 }
 

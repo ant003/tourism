@@ -45,7 +45,7 @@ h2 {
 
 /* || SquareList Syles*/
 
-.squareList {
+.placeList {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;

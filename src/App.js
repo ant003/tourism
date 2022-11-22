@@ -1,12 +1,12 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import PlaceList from "./PlaceList";
+import Home from "./Home";
 
 function App() {
     return (
         <div className="App">
             <Navbar/>
-            <PlaceList/>
+            <Home/>
             <Footer/>
         </div>
 
