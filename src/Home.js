@@ -1,23 +1,13 @@
-import { useState, useEffect } from "react";
 import PlaceList from "./PlaceList";
+import useFetch from "./useFetch";
 
 const Home = () => {
-    const [places, setPlaces] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect( () => {
-        fetch('http://localhost:8000/places')
-            .then( res =>  {
-                return res.json();
-            })
-            .then ( data => {
-                setPlaces(data);
-                setIsLoading(false);
-            })
-    },[]);
+    
+    const { data:places, isLoading, error} = useFetch('http://localhost:8000/places');
 
     return(
         <div className="home">
+            {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}
             {places && <PlaceList places={places}/>}
         </div>
