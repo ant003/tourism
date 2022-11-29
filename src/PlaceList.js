@@ -1,10 +1,13 @@
 import Square from "./Square";
+import { Link } from "react-router-dom";
 
 const PlaceList = ( {places} ) => {
     return(
             <div className="placeList" >
             {places.map(place => (
-                <Square square={place} key={place.id} />
+                <Link to={`/place/${place.id}`} key={place.id}>
+                    <Square square={place}/>
+                </Link>
             ))}
         </div>
 
