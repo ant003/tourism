@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
+import ContentList from "./ContentList";
 import useFetch from "./useFetch";
 
 const Place = () => {
+    const nameList = ["Distancia","Experiencia","Dificultad","Vehículo","Precio","Descripción"];
+    const keyList = ["distance","experience","difficulty","vehicle","price","description"];
     const { id } = useParams();
-
     const { data:place, isLoading, error} = useFetch(`http://localhost:8000/places/${id}`);
 
     return(
@@ -17,11 +19,7 @@ const Place = () => {
                 </div>
             </div>
             <div className="content">
-                <p><strong>Distancia:</strong> { place && place.distance}</p>
-                <p><strong>Difcultad:</strong> { place && place.difficulty}</p>
-                <p><strong>Vehículo:</strong> { place && place.vehicle}</p>
-                <p><strong>Precio:</strong> { place && place.price}</p>
-                <p><strong>Descripción:</strong> { place && place.description}</p>
+                {place && <ContentList nameList={nameList} keyList={keyList} dataList={place}/>}
             </div>
         </div>
     );
