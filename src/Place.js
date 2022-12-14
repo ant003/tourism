@@ -3,8 +3,8 @@ import ContentList from "./ContentList";
 import useFetch from "./useFetch";
 
 const Place = () => {
-    const nameList = ["Distancia","Experiencia","Dificultad","Vehículo","Precio","Descripción"];
-    const keyList = ["distance","experience","difficulty","vehicle","price","description"];
+    const nameList = ["Distancia:","Experiencia:","Dificultad:","Vehículo:","Precio:","Descripción:","","","","",""];
+    const keyList = ["distance","experience","difficulty","vehicle","price","description","p2","p3","p4","p5"];
     const { id } = useParams();
     const { data:place, isLoading, error} = useFetch(`http://localhost:8000/places/${id}`);
 

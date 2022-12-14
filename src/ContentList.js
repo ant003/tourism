@@ -9,7 +9,7 @@ const ContentList = ({nameList,keyList,dataList}) => {
 
         if(dataList.hasOwnProperty(key))
         {
-            list.push(<p key={key}><strong>{nameList[nameIndex]}: </strong>{dataList[key]}</p>);
+            list.push(<p key={key}><strong>{nameList[nameIndex]} </strong>{dataList[key]}</p>);
             ++nameIndex;
         }
     }
