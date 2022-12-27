@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Place from "./Place";
+import Map from "./Map";
 
 function App() {
     return (
@@ -15,6 +16,9 @@ function App() {
                     </Route>
                     <Route exact path="/place/:id">
                         <Place/>
+                    </Route>
+                    <Route exact path="/map">
+                        <Map/>
                     </Route>
                 </Switch>
                 <Footer/>

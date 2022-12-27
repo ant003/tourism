@@ -195,11 +195,15 @@ h2 {
 }
 
 
-.content {
+.content, .map {
   max-width: 900px;
   margin: 50px auto;
 }
 
 .content p {
   margin: 20px;
+}
+
+.map {
+  height: 500px;
 }
