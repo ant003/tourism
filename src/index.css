@@ -209,3 +209,7 @@ h2 {
   min-height: 700px;
   max-height: 1000px;
 }
+
+.map a{
+  font-size: 2em;
+}
