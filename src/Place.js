@@ -18,9 +18,7 @@ const Place = () => {
             {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}
             {place &&<Banner nameList={iconNames} keyList={iconKeys} dataList={place}/>}
-            <div className="content">
-                {place && <ContentList nameList={titleNames} keyList={titleKeys} dataList={place}/>}
-            </div>
+            {place && <ContentList nameList={titleNames} keyList={titleKeys} dataList={place}/>}
         </div>
     );
 }

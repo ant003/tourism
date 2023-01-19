@@ -1,13 +1,15 @@
 import KeyList from "./KeyList";
 const ContentList = ({nameList,keyList,dataList}) => {
     return (
-        <KeyList 
-        nameList={nameList}
-        keyList={keyList}
-        dataList={dataList}
-        kind={"content"}
-        >
-        </KeyList>
+        <div className="content">
+            <KeyList 
+            nameList={nameList}
+            keyList={keyList}
+            dataList={dataList}
+            kind={"content"}
+            >
+            </KeyList>
+        </div>
     );
 }
 export default ContentList;

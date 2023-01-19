@@ -147,6 +147,7 @@ h2 {
   font-weight: bold;
 }
 
+/*|| Banner styles*/
 .banner {
   min-height: 500px;
   background: linear-gradient(326deg, rgba(0,0,0,0.28) 30%, rgba(0,0,0,0.28) 70%), left 60% / cover no-repeat url("img/lanscape.jpg");
@@ -195,10 +196,14 @@ h2 {
   gap: 5px;
 }
 
-
+/*|| Map styles*/
 .content, .map {
   max-width: 90%;
   margin: 50px auto;
+}
+
+.content {
+  max-width: 900px;
 }
 
 .content p {
