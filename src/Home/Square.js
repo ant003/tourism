@@ -1,4 +1,4 @@
-import noImage from "./img/noImage.png";
+import noImage from "../img/noImage.png";
 
 const Square = ({square}) =>{
     return (

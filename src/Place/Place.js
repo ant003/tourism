@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Banner from "./Banner";
-import ContentList from "./ContentList";
-import useFetch from "./useFetch";
+import ContentList from "../shared/ContentList";
+import useFetch from "../customHooks/useFetch";
 
 const Place = () => {
     const titleNames = ["Distancia:","Experiencia:","Dificultad:","Vehículo:","Precio:","Descripción:","","","","",""];

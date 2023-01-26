@@ -1,9 +1,9 @@
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import Home from "./Home";
+import Footer from "./shared/Footer";
+import Navbar from "./shared/Navbar";
+import Home from "./Home/Home";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Place from "./Place";
-import Map from "./Map";
+import Place from "./Place/Place";
+import Map from "./Map/Map";
 
 function App() {
     return (

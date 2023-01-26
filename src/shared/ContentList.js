@@ -1,4 +1,4 @@
-import KeyList from "./KeyList";
+import KeyList from "../Place/KeyList";
 const ContentList = ({nameList,keyList,dataList}) => {
     return (
         <div className="content">

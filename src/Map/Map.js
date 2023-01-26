@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer} from 'react-leaflet';
-import useFetch from "./useFetch";
+import useFetch from "../customHooks/useFetch";
 import MarkerList from './MarkerList';
 
 const Map = () => {

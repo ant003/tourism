@@ -1,5 +1,5 @@
 import PlaceList from "./PlaceList";
-import useFetch from "./useFetch";
+import useFetch from "../customHooks/useFetch";
 
 const Home = () => {
     
