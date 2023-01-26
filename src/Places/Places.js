@@ -1,7 +1,7 @@
 import PlaceList from "./PlaceList";
 import useFetch from "../customHooks/useFetch";
 
-const Home = () => {
+const Places = () => {
     
     const { data:places, isLoading, error} = useFetch('http://localhost:8000/places');
 
@@ -14,4 +14,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Places;

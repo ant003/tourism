@@ -1,6 +1,6 @@
 import Footer from "./shared/Footer";
 import Navbar from "./shared/Navbar";
-import Home from "./Home/Home";
+import Places from "./Places/Places";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Place from "./Place/Place";
 import Map from "./Map/Map";
@@ -11,8 +11,8 @@ function App() {
             <div className="App">
                 <Navbar/>
                 <Switch>
-                    <Route exact path="/">
-                        <Home/>
+                    <Route exact path="/lugares">
+                        <Places/>
                     </Route>
                     <Route exact path="/place/:id">
                         <Place/>
