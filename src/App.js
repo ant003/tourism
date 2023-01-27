@@ -4,6 +4,7 @@ import Places from "./Places/Places";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Place from "./Place/Place";
 import Map from "./Map/Map";
+import Create from "./Create/Create";
 
 function App() {
     return (
@@ -19,6 +20,9 @@ function App() {
                     </Route>
                     <Route exact path="/map">
                         <Map/>
+                    </Route>
+                    <Route exact path="/crear">
+                        <Create/>
                     </Route>
                 </Switch>
                 <Footer/>
