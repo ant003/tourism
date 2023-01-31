@@ -1,8 +1,10 @@
 import { useState } from "react";
 import InputElement from "./InputElement";
 import OptionsElement from "./OptionsElement";
+import { useHistory } from "react-router-dom";
 const Create = () => {
     const [isPending, setIsPending] = useState(false);
+    const history = useHistory();
     const [formValues, setFormValues] = useState({
         name: '',
         experience: 'Catarata',
@@ -37,6 +39,7 @@ const Create = () => {
         .then(() => {
             setIsPending(false);
             console.log('New place added');
+            history.push('/');
         })
     }
 
