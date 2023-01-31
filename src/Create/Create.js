@@ -1,25 +1,33 @@
 import { useState } from "react";
+import InputElement from "./InputElement";
+import OptionsElement from "./OptionsElement";
 const Create = () => {
-    const [name,setName] = useState('');
-    const [experience, setExperience] = useState('Catarata');
-    const [distance, setDistance] = useState('');
-    const [vehicle, setVehicle] = useState('Automóvil');
-    const [difficulty, setDifficulty] = useState('Fácil');
-    const [price, setPrice] = useState('');
-    const [province, setProvince] = useState('San José');
-    const [description, setDescription] = useState('');
-    const [coordenate, setCoordenate] = useState('');
     const [isPending, setIsPending] = useState(false);
+    const [formValues, setFormValues] = useState({
+        name: '',
+        experience: 'Catarata',
+        distance: '',
+        vehicle: 'Automóvil',
+        difficulty: 'Fácil',
+        price: '',
+        province: 'San José',
+        description: '',
+        coordenate: ''
+    });
+
+    const handleChange = (event) =>{
+        const {name,value} = event.target;
+        setFormValues({...formValues, [name]:value});
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        let array = coordenate.split(',');
+        let array = formValues.coordenate.split(',');
         array = array.map((ele) => Number(ele));
 
-        const place = {name,experience,distance,
-            vehicle,difficulty,price,province,
-            description,coordenate:array}
-            setIsPending(true);
+        const place = formValues;
+        place.coordenate = array;
+        setIsPending(true);
         
         fetch('http://localhost:8000/places', {
             method: 'POST',
@@ -36,81 +44,55 @@ const Create = () => {
         <div className="create">
             <h2>Crear un nuevo lugar</h2>
             <form onSubmit={handleSubmit}>
-                <label>Nombre</label>
-                <input
-                    type="text"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                <InputElement 
+                labelName={"Nombre"} value={formValues.name} handler={handleChange} name={"name"}
                 />
-                <label>Experiencia</label>
-                <select
-                    value={experience}
-                    onChange={(e) => setExperience(e.target.value)}
-                >
-                    <option value={"Catarata"}>Catarata</option>
-                    <option value={"Playa"}>Playa</option>
-                    <option value={"Montaña"}>Montaña</option>
-                    <option value={"PN"}>PN</option>
-                    <option value={"Picnic"}>Picnic</option>
-                    <option value={"Río"}>Río</option>
-                </select>
-                <label>Distancia</label>
-                <input
-                    type="text"
-                    required
-                    value={distance}
-                    onChange={(e) => setDistance(e.target.value)}
+                <OptionsElement
+                labelName={"Experiencia"}
+                options={["Catarata","Playa","Montaña","PN","Picnic","Río"]}
+                value={formValues.experience}
+                handler={handleChange}
+                name={"experience"}
                 />
-                <label>Vehículo</label>
-                <select
-                    value={vehicle}
-                    onChange={(e) => setVehicle(e.target.value)}
-                >
-                    <option value={"Automóvil"}>Automóvil</option>
-                    <option value={"4x4"}>4x4</option>
-                </select>
-                <label>Dificultad</label>
-                <select
-                    value={difficulty}
-                    onChange={(e) => setDifficulty(e.target.value)}
-                >
-                    <option value={"Fácil"}>Fácil</option>
-                    <option value={"Medio"}>Medio</option>
-                    <option value={"Difícil"}>Difícil</option>
-                </select>
-                <label>Precio</label>
-                <input
-                    type="text"
-                    required
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
+                <InputElement
+                labelName={"Distancia"} value={formValues.distance} handler={handleChange} name={"distance"}
                 />
-                <label>Provincia</label>
-                <select
-                    value={province}
-                    onChange={(e) => setProvince(e.target.value)}
-                >
-                    <option value={"San José"}>San José</option>
-                    <option value={"Alajuela"}>Alajuela</option>
-                    <option value={"Cartago"}>Cartago</option>
-                    <option value={"Heredia"}>Heredia</option>
-                    <option value={"Guanacaste"}>Guanacaste</option>
-                    <option value={"Puntarenas"}>Puntarenas</option>
-                    <option value={"Limón"}>Limón</option>
-                </select>
+                <OptionsElement
+                labelName={"Vehículo"}
+                options={["Automóvil","4x4"]}
+                value={formValues.vehicle}
+                handler={handleChange}
+                name={"vehicle"}
+                />
+                <OptionsElement
+                labelName={"Dificultad"}
+                options={["Fácil","Medio","Difícil"]}
+                value={formValues.difficulty}
+                handler={handleChange}
+                name={"difficulty"}
+                />
+                <InputElement
+                labelName={"Precio"} value={formValues.price} handler={handleChange} name={"price"}
+                />
+                <OptionsElement
+                labelName={"Provincia"}
+                options={["San José","Alajuela","Cartago","Heredia","Guanacaste","Puntarenas","Limón"]}
+                value={formValues.province}
+                handler={handleChange}
+                name={"province"}
+                />
                 <label>Descripción</label>
                 <textarea
                     required
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
+                    value={formValues.description}
+                    onChange={handleChange}
+                    name={"description"}
                 ></textarea>
-                <label>Coordenada</label>
-                <input
-                    type="text"
-                    required
-                    value={coordenate}
-                    onChange={(e) => setCoordenate(e.target.value)}
+                <InputElement
+                labelName={"Coordenadas"}
+                value={formValues.coordenate}
+                handler={handleChange}
+                name={"coordenate"}
                 />
                 {!isPending && <button>Add place</button>}
                 {isPending && <button disabled>Adding place...</button>}
