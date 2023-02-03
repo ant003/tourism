@@ -10,6 +10,9 @@ const MarkerList = ( {places} ) =>{
     return(
         <div>
             {places.map(place =>(
+                place.coordenate && 
+                place.coordenate[0] &&
+                place.coordenate[1] &&
                 <Marker key={place.id} position={place.coordenate} icon={markerIcon}>
                     <Popup>
                         <Link to={`/place/${place.id}`}>{place.name}</Link>
