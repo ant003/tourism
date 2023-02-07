@@ -6,7 +6,7 @@ const Places = () => {
     const { data:places, isLoading, error} = useFetch('http://localhost:8000/places');
 
     return(
-        <div className="home">
+        <div className="places">
             {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}
             {places && <PlaceList places={places}/>}

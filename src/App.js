@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Place from "./Place/Place";
 import Map from "./Map/Map";
 import Create from "./Create/Create";
+import Home from "./Home/Home";
 
 function App() {
     return (
@@ -12,6 +13,9 @@ function App() {
             <div className="App">
                 <Navbar/>
                 <Switch>
+                    <Route exact path="/">
+                        <Home/>
+                    </Route>
                     <Route exact path="/lugares">
                         <Places/>
                     </Route>
