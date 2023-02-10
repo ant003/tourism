@@ -1,4 +1,4 @@
-const Square = ({square}) =>{
+const Square = ({square, showP}) =>{
 
    let imageName = "noImage.png";
    
@@ -10,7 +10,7 @@ const Square = ({square}) =>{
         <div className="square">
             <img src={require(`../img/${imageName}`)} alt="noImage"></img>
             <h2>{square.name}</h2>
-            <p>{`${square.experience} + ${square.vehicle} + ${square.price}` }</p>
+            {showP && <p>{`${square.experience} + ${square.vehicle} + ${square.price}` }</p>}
         </div>
     );
 }

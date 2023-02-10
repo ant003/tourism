@@ -6,7 +6,7 @@ const PlaceList = ( {places} ) => {
             <div className="placeList" >
             {places.map(place => (
                 <Link to={`/place/${place.id}`} key={place.id}>
-                    <Square square={place}/>
+                    <Square square={place} showP={true}/>
                 </Link>
             ))}
         </div>
