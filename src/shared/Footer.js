@@ -1,17 +1,18 @@
 import { Icon } from '@iconify/react';
+import './navFooter.css';
 
 const Footer = () => {
     return (
         <footer className="footer">
             <ul className="social">
                 <li>
-                    <a href="/facebook"><Icon icon="ri:facebook-box-fill" width="50" height="50" alt="Facebook"/></a>
+                    <a href="/facebook"><Icon icon="ri:facebook-box-fill" width="50" height="50" alt="Facebook" /></a>
                 </li>
                 <li>
-                    <a href="/twitter"><Icon icon="ri:twitter-line" width="50" height="50" alt="Twitter"/></a>
+                    <a href="/twitter"><Icon icon="ri:twitter-line" width="50" height="50" alt="Twitter" /></a>
                 </li>
                 <li>
-                    <a href="/instagram"><Icon icon="ri:instagram-line" width="50" height="50" alt="Twitter"/></a>
+                    <a href="/instagram"><Icon icon="ri:instagram-line" width="50" height="50" alt="Twitter" /></a>
                 </li>
             </ul>
             <ul>

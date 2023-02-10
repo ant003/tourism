@@ -1,8 +1,8 @@
-import Carousel from './Carousel';
-import './carousel.css';
+import './home.css';
+import Carousel from '../shared/Carousel';
 import useFetch from '../customHooks/useFetch.js';
 import Square from '../Places/Square';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const { data: places, isLoading, error } = useFetch('http://localhost:8000/places');

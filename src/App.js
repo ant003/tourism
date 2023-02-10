@@ -1,39 +1,39 @@
-import Footer from "./shared/Footer";
-import Navbar from "./shared/Navbar";
-import Places from "./Places/Places";
+import Footer from './shared/Footer';
+import Navbar from './shared/Navbar';
+import Places from './Places/Places';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Place from "./Place/Place";
-import Map from "./Map/Map";
-import Create from "./Create/Create";
-import Home from "./Home/Home";
+import Place from './Place/Place';
+import Map from './Map/Map';
+import Create from './Create/Create';
+import Home from './Home/Home';
 
 function App() {
     return (
         <Router>
             <div className="App">
-                <Navbar/>
+                <Navbar />
                 <Switch>
                     <Route exact path="/">
-                        <Home/>
+                        <Home />
                     </Route>
                     <Route exact path="/lugares">
-                        <Places/>
+                        <Places />
                     </Route>
                     <Route exact path="/place/:id">
-                        <Place/>
+                        <Place />
                     </Route>
                     <Route exact path="/map">
-                        <Map/>
+                        <Map />
                     </Route>
                     <Route exact path="/crear">
-                        <Create/>
+                        <Create />
                     </Route>
                 </Switch>
-                <Footer/>
+                <Footer />
             </div>
         </Router>
 
     );
-  }
-  
-  export default App;
+}
+
+export default App;

@@ -1,12 +1,12 @@
-import KeyList from "../Place/KeyList";
-const ContentList = ({nameList,keyList,dataList}) => {
+import KeyList from '../Place/KeyList';
+const ContentList = ({ nameList, keyList, dataList }) => {
     return (
         <div className="content">
-            <KeyList 
-            nameList={nameList}
-            keyList={keyList}
-            dataList={dataList}
-            kind={"content"}
+            <KeyList
+                nameList={nameList}
+                keyList={keyList}
+                dataList={dataList}
+                kind={"content"}
             >
             </KeyList>
         </div>
