@@ -1,4 +1,3 @@
-import noImage from '../img/noImage.png'
 import Carousel from './Carousel';
 import './carousel.css';
 import useFetch from '../customHooks/useFetch.js';
@@ -14,7 +13,6 @@ const Home = () => {
             newPlaces.push(places[i]);
         }
     }
-
     return (
         <div className="home">
             <section id="standOuot">
