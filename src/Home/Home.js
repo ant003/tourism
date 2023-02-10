@@ -19,12 +19,14 @@ const Home = () => {
         <div className="home">
             <section id="standOuot">
                 <h1>Lugar destacado</h1>
-                <p>{places[0].description}</p>
+                {places && <p>{places[0].description}</p>}
             </section>
             <section id="standPhoto">
-                <Link to={`/place/${places[0].id}`} key={places[0].id}>
-                    <Square square={places[0]} showP={false} />
-                </Link>
+                {places &&
+                    <Link to={`/place/${places[0].id}`} key={places[0].id}>
+                        <Square square={places[0]} showP={false} />
+                    </Link>
+                }
             </section>
             <section id="newPlaces">
                 <h2>Lugares nuevos</h2>
