@@ -1,14 +1,17 @@
 import './places.css';
-import Square from './Square';
-import { Link } from 'react-router-dom';
+import Square from '../shared/Square';
 
 const PlaceList = ({ places }) => {
     return (
         <div className="placeList" >
             {places.map(place => (
-                <Link to={`/place/${place.id}`} key={place.id}>
-                    <Square square={place} showP={true} />
-                </Link>
+                <Square
+                    url={`/place/${place.id}`}
+                    square={place}
+                    showP={true}
+                    kind={"placeList"}
+                    key={place.id}
+                />
             ))}
         </div>
 

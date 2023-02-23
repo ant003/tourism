@@ -1,0 +1,48 @@
+/* || Square styles*/
+$text-color: black;
+$hover-color: rgb(73, 72, 72);
+
+@mixin square($SqrWidth: 250px,
+    $SqrHeight: 350px,
+    $ImgHeight: 250px) {
+    width: $SqrWidth;
+    height: $SqrHeight;
+    line-height: 1.5;
+
+    img {
+        width: 100%;
+        height: $ImgHeight;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-size: 2em;
+        text-decoration: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
+
+    a:hover {
+        color: $hover-color;
+    }
+
+    p {
+        font-size: 1.8em;
+    }
+
+    p,
+    h2 {
+        padding-left: 5px;
+    }
+}
+
+.placeList {
+    @include square;
+}
+
+.carousel {
+    @include square(100%, 450px, 350px);
+}

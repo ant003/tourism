@@ -1,8 +1,7 @@
 import './home.css';
 import Carousel from '../shared/Carousel';
 import useFetch from '../customHooks/useFetch.js';
-import Square from '../Places/Square';
-import { Link } from 'react-router-dom';
+import Square from '../shared/Square';
 
 const Home = () => {
     const { data: places, isLoading, error } = useFetch('http://localhost:8000/places');
@@ -21,9 +20,13 @@ const Home = () => {
             </section>
             <section id="standPhoto">
                 {places &&
-                    <Link to={`/place/${places[0].id}`} key={places[0].id}>
-                        <Square square={places[0]} showP={false} />
-                    </Link>
+                    <Square
+                        url={`/place/${places[0].id}`}
+                        square={places[0]}
+                        showP={false}
+                        kind={"carousel"}
+                        key={places[0].id}
+                    />
                 }
             </section>
             <section id="newPlaces">
@@ -34,9 +37,14 @@ const Home = () => {
                     {
                         newPlaces.map(place => {
                             return (
-                                <Link to={`/place/${place.id}`} key={place.id}>
-                                    <Square square={place} showP={false} />
-                                </Link>);
+                                <Square
+                                    url={`/place/${place.id}`}
+                                    square={place}
+                                    showP={false}
+                                    kind={"carousel"}
+                                    key={place.id}
+                                />
+                            );
                         })
                     }
                 </Carousel>

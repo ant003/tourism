@@ -1,32 +1,3 @@
-/*|| Square styles*/
-
-.placeList .square {
-    width: 250px;
-    height: 350px;
-    border-radius: 4px;
-    line-height: 1.5;
-}
-
-.placeList .square img {
-    width: 100%;
-    height: 250px;
-    border-radius: 20px;
-}
-
-.placeList .square h2 {
-    font-size: 2em;
-    text-decoration: none;
-}
-
-.placeList .square p {
-    font-size: 1.8em;
-}
-
-.placeList .square p,
-h2 {
-    padding-left: 5px;
-}
-
 /* || SquareList Syles*/
 
 .placeList {
