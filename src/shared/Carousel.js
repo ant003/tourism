@@ -1,4 +1,4 @@
-import './carousel.css';
+import styles from './carousel.module.css';
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -24,16 +24,16 @@ const Carousel = ({ children, size }) => {
     }
 
     return (
-        <div className="carousel">
-            <div className="carousel-wrapper">
+        <div>
+            <div className={styles.wrapper}>
                 {
                     currentIndex > 0 &&
-                    <button onClick={handlePrev} className="left-arrow">
+                    <button onClick={handlePrev} className={styles.leftArrow}>
                         &lt;
                     </button>
                 }
-                <div className="carousel-content-wrapper">
-                    <div className={`carousel-content show-${size}`}
+                <div className={styles.contentWrapper}>
+                    <div className={styles.content + ' ' + styles[`show${size}`]}
                         style={{ transform: `translateX(-${currentIndex * (100 / size)}%)` }}
                     >
                         {children}
@@ -41,7 +41,7 @@ const Carousel = ({ children, size }) => {
                 </div>
                 {
                     currentIndex < (length - size) &&
-                    <button onClick={handleNext} className="right-arrow">
+                    <button onClick={handleNext} className={styles.rightArrow}>
                         &gt;
                     </button>
                 }

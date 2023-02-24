@@ -1,18 +1,18 @@
 /* || Carousel Syles*/
 
-.carousel-wrapper {
+.wrapper {
     display: flex;
     width: 100%;
     position: relative;
 }
 
-.carousel-content-wrapper {
+.contentWrapper {
     overflow: hidden;
     width: 100%;
     height: 100%;
 }
 
-.carousel-content {
+.content {
     display: flex;
     gap: 1%;
     justify-content: space-between;
@@ -24,33 +24,33 @@
 }
 
 /* hide scrollbar in webkit browser */
-.carousel-content::-webkit-scrollbar,
-.carousel-content::-webkit-scrollbar {
+.content::-webkit-scrollbar,
+.content::-webkit-scrollbar {
     display: none;
 }
 
-.carousel-content>* {
+.content>* {
     width: 100%;
     flex-shrink: 0;
     flex-grow: 1;
 }
 
-.left-arrow,
-.right-arrow {
+.show2>* {
+    width: calc(50% - 1%);
+}
+
+.show3>* {
+    width: calc(100% / 3 - 1%);
+}
+
+.show4>* {
+    width: calc(100% / 4 - 1%);
+}
+
+.leftArrow,
+.rightArrow {
     border: none;
     background-color: white;
     font-size: 3em;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.carousel-content.show-2>* {
-    width: calc(50% - 1%);
-}
-
-.carousel-content.show-3>* {
-    width: calc(100% / 3 - 1%);
-}
-
-.carousel-content.show-4>* {
-    width: calc(100% / 4 -1%);
 }
