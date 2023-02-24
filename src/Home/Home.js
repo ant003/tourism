@@ -1,4 +1,4 @@
-import './home.css';
+import style from './home.module.css';
 import Carousel from '../shared/Carousel';
 import useFetch from '../customHooks/useFetch.js';
 import Square from '../shared/Square';
@@ -13,12 +13,12 @@ const Home = () => {
         }
     }
     return (
-        <div className="home">
-            <section id="standOuot">
+        <div className={style.home}>
+            <section className={style.standOuot}>
                 <h1>Lugar destacado</h1>
                 {places && <p>{places[0].description}</p>}
             </section>
-            <section id="standPhoto">
+            <section className={style.standPhoto}>
                 {places &&
                     <Square
                         url={`/place/${places[0].id}`}
@@ -29,7 +29,7 @@ const Home = () => {
                     />
                 }
             </section>
-            <section id="newPlaces">
+            <section className={style.newPlaces}>
                 <h2>Lugares nuevos</h2>
                 {error && <div>{error}</div>}
                 {isLoading && <div>Loading...</div>}
