@@ -1,0 +1,51 @@
+/* || Navbar and footer styles*/
+
+.navbar,
+.footer {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.568);
+    padding: 4.5em 0;
+    margin: 0 auto;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 500;
+
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    a {
+        font-size: 2.5rem;
+        margin: 0 1em;
+        text-decoration: none;
+        font-weight: bolder;
+        color: rgb(43, 133, 43);
+        text-shadow: 2px 1px 1px black;
+    }
+
+    a:hover {
+        color: rgb(117, 207, 117);
+    }
+}
+
+.footer {
+    border-top: rgb(29, 17, 4) solid 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: rgb(58, 35, 8);
+
+    img {
+        font-size: 1em;
+    }
+}
+
+.social {
+    margin-bottom: 30px;
+
+    a {
+        margin: 0;
+    }
+}
