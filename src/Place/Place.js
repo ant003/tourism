@@ -1,4 +1,4 @@
-import './place.css';
+import styles from './place.module.css';
 import { useParams } from 'react-router-dom';
 import Banner from './Banner';
 import ContentList from '../shared/ContentList';
@@ -15,7 +15,7 @@ const Place = () => {
     const { data: place, isLoading, error } = useFetch(`http://localhost:8000/places/${id}`);
 
     return (
-        <div className="place">
+        <div className={styles.place}>
             {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}
             {place && <Banner nameList={iconNames} keyList={iconKeys} dataList={place} />}

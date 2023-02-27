@@ -1,0 +1,73 @@
+/*|| Place styles*/
+.place h1 {
+  font-size: 5em;
+}
+.place h2 {
+  font-size: 3em;
+}
+.place p {
+  font-size: 2em;
+  font-family: sans-serif;
+}
+.place strong {
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/*|| Banner styles*/
+.banner {
+  min-height: 500px;
+  background: linear-gradient(326deg, rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0.25) 70%);
+}
+
+.background img {
+  position: absolute;
+  max-height: 500px;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: 50% 60%;
+}
+
+.bannerCont {
+  min-height: inherit;
+  display: flex;
+  gap: 5px;
+  align-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 1px 2px 1px black;
+}
+
+.bannerCont h1 {
+  width: 100%;
+}
+.bannerCont p {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.bannerCont ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  padding-inline-start: 0;
+  margin-bottom: 30px;
+}
+.bannerCont li {
+  margin: 0 20px;
+}
+
+.iconName {
+  display: flex;
+  line-height: 40px;
+  gap: 5px;
+}
+.iconName div {
+  font-size: 2em;
+}
+
+/*# sourceMappingURL=place.module.css.map */

@@ -1,4 +1,4 @@
-import './map.css';
+import style from './map.module.css'
 import { MapContainer, TileLayer } from 'react-leaflet';
 import useFetch from '../customHooks/useFetch';
 import MarkerList from './MarkerList';
@@ -9,7 +9,7 @@ const Map = () => {
 
     return (
 
-        <MapContainer className="map" center={startPosition} zoom={8} scrollWheelZoom={false}>
+        <MapContainer className={style.map} center={startPosition} zoom={8} scrollWheelZoom={false}>
             {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}
             <TileLayer

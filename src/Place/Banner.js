@@ -1,3 +1,4 @@
+import styles from './place.module.css';
 import KeyList from './KeyList';
 
 const Banner = ({ nameList, keyList, dataList }) => {
@@ -9,11 +10,11 @@ const Banner = ({ nameList, keyList, dataList }) => {
     }
 
     return (
-        <div className="banner">
-            <div className="background">
+        <div className={styles.banner}>
+            <div className={styles.background}>
                 <img src={require(`../img/${imageName}`)} alt="banner-background" />
             </div>
-            <div className="bannerCont">
+            <div className={styles.bannerCont}>
                 <h1>{dataList.name}</h1>
                 <h2>{dataList.province}</h2>
                 <ul>

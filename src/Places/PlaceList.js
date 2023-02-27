@@ -1,9 +1,9 @@
-import './places.css';
+import styles from './places.module.css';
 import Square from '../shared/Square';
 
 const PlaceList = ({ places }) => {
     return (
-        <div className="placeList" >
+        <div className={styles.placeList} >
             {places.map(place => (
                 <Square
                     url={`/place/${place.id}`}
