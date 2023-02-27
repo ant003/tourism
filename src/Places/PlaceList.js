@@ -1,5 +1,5 @@
 import styles from './places.module.css';
-import Square from '../shared/Square';
+import Square from '../shared/Square/Square';
 
 const PlaceList = ({ places }) => {
     return (

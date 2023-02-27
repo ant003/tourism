@@ -1,5 +1,5 @@
-import Footer from './shared/Footer';
-import Navbar from './shared/Navbar';
+import Footer from './shared/NavFooter/Footer';
+import Navbar from './shared/NavFooter/Navbar';
 import Places from './Places/Places';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Place from './Place/Place';

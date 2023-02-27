@@ -9,7 +9,7 @@ const Square = ({ url, square, showP, kind }) => {
     return (
         <div className={style[kind]}>
             <Link to={url}>
-                <img src={require(`../img/${imageName}`)} alt="noImage"></img>
+                <img src={require(`../../img/${imageName}`)} alt="noImage"></img>
                 <h2>{square.name}</h2>
                 {showP && <p>{`${square.experience} + ${square.vehicle} + ${square.price}`}</p>}
             </Link>

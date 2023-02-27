@@ -1,7 +1,7 @@
 import style from './home.module.css';
-import Carousel from '../shared/Carousel';
+import Carousel from '../shared/Carousel/Carousel';
 import useFetch from '../customHooks/useFetch.js';
-import Square from '../shared/Square';
+import Square from '../shared/Square/Square';
 
 const Home = () => {
     const { data: places, isLoading, error } = useFetch('http://localhost:8000/places');
