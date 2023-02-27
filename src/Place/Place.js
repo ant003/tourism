@@ -1,7 +1,7 @@
 import styles from './place.module.css';
 import { useParams } from 'react-router-dom';
-import Banner from './Banner';
-import ContentList from '../shared/ContentList';
+import Banner from './Banner/Banner';
+import Content from './Content/Content';
 import useFetch from '../customHooks/useFetch';
 
 const Place = () => {
@@ -19,7 +19,7 @@ const Place = () => {
             {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}
             {place && <Banner nameList={iconNames} keyList={iconKeys} dataList={place} />}
-            {place && <ContentList nameList={titleNames} keyList={titleKeys} dataList={place} />}
+            {place && <Content propertiesNames={titleNames} titles={titleKeys} data={place} />}
         </div>
     );
 }

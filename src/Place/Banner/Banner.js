@@ -1,5 +1,5 @@
-import styles from './place.module.css';
-import KeyList from './KeyList';
+import styles from './banner.module.css';
+import BannerElements from './BannerElements';
 
 const Banner = ({ nameList, keyList, dataList }) => {
 
@@ -12,19 +12,18 @@ const Banner = ({ nameList, keyList, dataList }) => {
     return (
         <div className={styles.banner}>
             <div className={styles.background}>
-                <img src={require(`../img/${imageName}`)} alt="banner-background" />
+                <img src={require(`../../img/${imageName}`)} alt="banner-background" />
             </div>
             <div className={styles.bannerCont}>
                 <h1>{dataList.name}</h1>
                 <h2>{dataList.province}</h2>
                 <ul>
-                    <KeyList
-                        nameList={nameList}
-                        keyList={keyList}
-                        dataList={dataList}
-                        kind={"banner"}
+                    <BannerElements
+                        elementsNames={nameList}
+                        titles={keyList}
+                        data={dataList}
                     >
-                    </KeyList>
+                    </BannerElements>
                 </ul>
             </div>
         </div>

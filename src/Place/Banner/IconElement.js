@@ -1,7 +1,7 @@
-import styles from './place.module.css';
+import styles from './banner.module.css';
 import { Icon } from '@iconify/react';
 
-const BannerElement = ({ index, nameList, nameIndex, dataList }) => {
+const IconElement = ({ index, nameList, nameIndex, dataList }) => {
     return (
         <div className={styles.iconName}>
             <Icon icon={nameList[nameIndex]} width="45" height="45" alt="icon"></Icon>
@@ -12,4 +12,4 @@ const BannerElement = ({ index, nameList, nameIndex, dataList }) => {
     );
 }
 
-export default BannerElement;
+export default IconElement;
