@@ -1,4 +1,4 @@
-import './create.css';
+import style from './create.module.css';
 import { useState } from 'react';
 import InputElement from './InputElement';
 import OptionsElement from './OptionsElement';
@@ -45,7 +45,7 @@ const Create = () => {
     }
 
     return (
-        <div className="create">
+        <div className={style.create}>
             <h2>Crear un nuevo lugar</h2>
             <form onSubmit={handleSubmit}>
                 <InputElement

@@ -1,0 +1,46 @@
+/*|| Create styles*/
+.create {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    h2 {
+        font-size: 3em;
+    }
+
+    label {
+        font-size: 2.5em;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    option {
+        font-size: 1.8rem;
+    }
+
+    input,
+    textarea,
+    button,
+    label,
+    select {
+        display: block;
+        font-size: 2em;
+        text-align: left;
+    }
+
+    input,
+    select {
+        width: 100%;
+    }
+
+    input,
+    textarea,
+    select {
+        margin: 10px 0;
+    }
+}
