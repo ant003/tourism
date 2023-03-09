@@ -2,13 +2,15 @@ import style from './map.module.css'
 import { MapContainer, TileLayer } from 'react-leaflet';
 import useFetch from '../customHooks/useFetch';
 import MarkerList from './MarkerList';
-
 const Map = () => {
+    /**
+     * Sets the map postion over Costa Rica,
+     * the country we are interested in
+     */
     const startPosition = [9.81191642, -83.77624512];
     const { data: places, isLoading, error } = useFetch('http://localhost:8000/places');
 
     return (
-
         <MapContainer className={style.map} center={startPosition} zoom={8} scrollWheelZoom={false}>
             {error && <div>{error}</div>}
             {isLoading && <div>Loading...</div>}

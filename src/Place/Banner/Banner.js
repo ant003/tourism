@@ -1,12 +1,13 @@
 import styles from './banner.module.css';
-import BannerElements from './BannerElements';
+import BannerElementList from './BannerElementList';
 
-const Banner = ({ nameList, keyList, dataList }) => {
+const Banner = ({ namesList, propertiesList, data }) => {
 
-    let imageName = "lanscape.jpg";
+    const defaultImage = "lanscape.jpg";
+    let imageName = defaultImage;
 
-    if (dataList.imageName !== undefined) {
-        imageName = dataList.imageName;
+    if (data.imageName !== undefined) {
+        imageName = data.imageName;
     }
 
     return (
@@ -15,15 +16,15 @@ const Banner = ({ nameList, keyList, dataList }) => {
                 <img src={require(`../../img/${imageName}`)} alt="banner-background" />
             </div>
             <div className={styles.bannerCont}>
-                <h1>{dataList.name}</h1>
-                <h2>{dataList.province}</h2>
+                <h1>{data.name}</h1>
+                <h2>{data.province}</h2>
                 <ul>
-                    <BannerElements
-                        elementsNames={nameList}
-                        titles={keyList}
-                        data={dataList}
+                    <BannerElementList
+                        namesList={namesList}
+                        propertiesList={propertiesList}
+                        data={data}
                     >
-                    </BannerElements>
+                    </BannerElementList>
                 </ul>
             </div>
         </div>

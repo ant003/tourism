@@ -1,16 +1,16 @@
 import style from './content.module.css';
-const Content = ({ propertiesNames, titles, data }) => {
+const Content = ({ namesList, propertiesList, data }) => {
 
     let list = [];
     let nameIndex = 0;
 
-    for (let key of titles) {
-        if (nameIndex === propertiesNames.length)
+    for (let property of propertiesList) {
+        if (nameIndex === namesList.length)
             break;
 
-        if (data.hasOwnProperty(key)) {
+        if (data.hasOwnProperty(property)) {
             list.push(
-                <p key={key}><strong>{propertiesNames[nameIndex]} </strong>{data[key]}</p>
+                <p key={property}><strong>{namesList[nameIndex]} </strong>{data[property]}</p>
             );
             ++nameIndex;
         }

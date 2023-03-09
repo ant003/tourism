@@ -1,5 +1,14 @@
 import style from './square.module.css';
 import { Link } from 'react-router-dom';
+/**
+ * This is a generic component its
+ * a square with an image that is 
+ * clickable.
+ * It could be a carousel square or a place
+ * square depending of the kind received by
+ * param.
+ */
+
 const Square = ({ url, square, showP, kind }) => {
 
     let imageName = "noImage.png";

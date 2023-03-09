@@ -1,11 +1,10 @@
-import style from './create.module.css';
 import { useState } from 'react';
-import InputElement from './InputElement';
-import OptionsElement from './OptionsElement';
 import { useHistory } from 'react-router-dom';
+import CreateForm from './CreateForm';
 const Create = () => {
     const [isPending, setIsPending] = useState(false);
     const history = useHistory();
+    //Default values for the form
     const [formValues, setFormValues] = useState({
         name: '',
         experience: 'Catarata',
@@ -18,11 +17,19 @@ const Create = () => {
         coordenate: ''
     });
 
+    /**
+     * Called each time any of the values on the input are changed
+     * It updates the values in the form state
+     */
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormValues({ ...formValues, [name]: value });
     }
 
+    /**
+     * Called when the form button is clicked
+     * Does a POST request to send the data to the json database
+     */
     const handleSubmit = (e) => {
         e.preventDefault();
         let array = formValues.coordenate.split(',');
@@ -45,63 +52,10 @@ const Create = () => {
     }
 
     return (
-        <div className={style.create}>
-            <h2>Crear un nuevo lugar</h2>
-            <form onSubmit={handleSubmit}>
-                <InputElement
-                    labelName={"Nombre"} value={formValues.name} handler={handleChange} name={"name"}
-                />
-                <OptionsElement
-                    labelName={"Experiencia"}
-                    options={["Catarata", "Playa", "Montaña", "PN", "Picnic", "Río"]}
-                    value={formValues.experience}
-                    handler={handleChange}
-                    name={"experience"}
-                />
-                <InputElement
-                    labelName={"Distancia"} value={formValues.distance} handler={handleChange} name={"distance"}
-                />
-                <OptionsElement
-                    labelName={"Vehículo"}
-                    options={["Automóvil", "4x4"]}
-                    value={formValues.vehicle}
-                    handler={handleChange}
-                    name={"vehicle"}
-                />
-                <OptionsElement
-                    labelName={"Dificultad"}
-                    options={["Fácil", "Medio", "Difícil"]}
-                    value={formValues.difficulty}
-                    handler={handleChange}
-                    name={"difficulty"}
-                />
-                <InputElement
-                    labelName={"Precio"} value={formValues.price} handler={handleChange} name={"price"}
-                />
-                <OptionsElement
-                    labelName={"Provincia"}
-                    options={["San José", "Alajuela", "Cartago", "Heredia", "Guanacaste", "Puntarenas", "Limón"]}
-                    value={formValues.province}
-                    handler={handleChange}
-                    name={"province"}
-                />
-                <label>Descripción</label>
-                <textarea
-                    required
-                    value={formValues.description}
-                    onChange={handleChange}
-                    name={"description"}
-                ></textarea>
-                <InputElement
-                    labelName={"Coordenadas"}
-                    value={formValues.coordenate}
-                    handler={handleChange}
-                    name={"coordenate"}
-                />
-                {!isPending && <button>Add place</button>}
-                {isPending && <button disabled>Adding place...</button>}
-            </form>
-        </div>
+        <CreateForm isPending={isPending}
+            formValues={formValues}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit} />
     );
 }
 

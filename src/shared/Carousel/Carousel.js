@@ -11,12 +11,21 @@ const Carousel = ({ children, size }) => {
         setLength(children.length);
     }, [children]);
 
+    /**
+     * Called when the right arrow is clicked
+     * it moves the carousel one slide to the
+     * right.
+     */
     const handleNext = () => {
         if (currentIndex < length - size) {
             setCurrentIndex(prev => prev + 1);
         }
     }
-
+    /**
+     * Called when the left arrow is clicked
+     * it moves the carousel one slide to the
+     * left.
+     */
     const handlePrev = () => {
         if (currentIndex > 0) {
             setCurrentIndex(prev => prev - 1);
