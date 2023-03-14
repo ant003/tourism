@@ -13,7 +13,7 @@
 
 .content {
   display: flex;
-  gap: 1%;
+  gap: 0.5%;
   justify-content: space-between;
   transition: all 250ms linear;
   -ms-overflow-style: none;
@@ -35,15 +35,15 @@
 }
 
 .show2 > * {
-  width: 49%;
+  width: 49.5%;
 }
 
 .show3 > * {
-  width: 32.3333333333%;
+  width: 32.8333333333%;
 }
 
 .show4 > * {
-  width: 24%;
+  width: 24.5%;
 }
 
 .leftArrow,
@@ -52,6 +52,21 @@
   background-color: white;
   font-size: 3em;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.rightArrow {
+  margin: 0 -6px;
+}
+
+.invisibleLeft {
+  visibility: hidden;
+  min-width: 25.5px;
+}
+
+.invisibleRight {
+  visibility: hidden;
+  min-width: 25.5px;
+  margin: 0 -6px;
 }
 
 /*# sourceMappingURL=carousel.module.css.map */

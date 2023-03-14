@@ -36,8 +36,8 @@ const Carousel = ({ children, size }) => {
         <div>
             <div className={styles.wrapper}>
                 {
-                    currentIndex > 0 &&
-                    <button onClick={handlePrev} className={styles.leftArrow}>
+                    //If there is not more elements to show the button becomes invisible
+                    <button onClick={handlePrev} className={currentIndex === 0 ? styles.invisibleLeft : styles.leftArrow}>
                         &lt;
                     </button>
                 }
@@ -49,8 +49,8 @@ const Carousel = ({ children, size }) => {
                     </div>
                 </div>
                 {
-                    currentIndex < (length - size) &&
-                    <button onClick={handleNext} className={styles.rightArrow}>
+                     //If there is not more elements to show the button becomes invisible
+                    <button onClick={handleNext} className={currentIndex === (length - size) ? styles.invisibleRight : styles.rightArrow}>
                         &gt;
                     </button>
                 }
