@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Costa Rica Tourism
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
+Costa Rica Tourism is a site that helps people find useful information to prepare themselves before traveling to some place in this country. This includes price, accessibility, difficulty, path distance (inside the interest point), the kind of experience (volcano, river, beach, etc...) among others. Further, it shows a general description for each place and some tips to enjoy the instance as much as possible.
 
-## Available Scripts
+As someone who is passionate about learning and programming, I began this project as a way to apply new skills in the web development field. Here I got to apply my knowledge of HTML, CSS, and Javascript. But more importantly, thanks to it, I learned about ReactJS's basis (functional components, hooks like state and effect), JSON servers basis, NPM, Webpack, browser APIs, and third-party APIs like Leafletjs (https://leafletjs.com/), CSS modules, and Sass.
 
-In the project directory, you can run:
 
-### `npm start`
+To handle the GET and POST requests, a simple JSON server was implemented.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Each component has its own folder, which contains its subcomponents and stylesheets needed for it to work. Some shared components are inside a special folder called "shared," but each one has its own separate folder as well. Likewise, the fonts, images, and custom hooks have their own folders containing the respective files.
 
-### `npm test`
+The main components to notice are: home (the main page), places (the list of places available), place (displays the place information), and map (shows a map to visually look for places).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+- node v19.1.0
+- react-router-dom@5
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Dependencies installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Install node version manager (NVM): 
+    - Linux and MacOS https://github.com/nvm-sh/nvm
+    - Windows https://github.com/coreybutler/nvm-windows
+2. Install the last node version:
+    ``` 
+    nvm node install 
+    ```
+3. Install the react router v5:
+    ``` 
+    npm install react-router-dom@5
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. Start the JSON server like so: 
+    ```
+    npx json-server --watch data/db.json --port 8000
+    ```
+2. Start the react server with:
+    ```
+    npm run start
+    ```
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+See [LICENSE](/LICENSE).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Maintainers
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Currently I am the only maintainer [@ant003](https://github.com/ant003).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you have any doubts or suggestions, feel free to write to me at:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Email:** antonio.alvarez.chavarria@gmail.com
