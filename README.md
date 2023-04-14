@@ -26,11 +26,15 @@ The main components to notice are: home (the main page), places (the list of pla
     - Windows https://github.com/coreybutler/nvm-windows
 2. Install the last node version:
     ``` 
-    nvm node install 
+    nvm install node 
     ```
 3. Install the react router v5:
     ``` 
     npm install react-router-dom@5
+    ```
+4. As this is a development build please bear in mid to install the npm modules like so: 
+    ``` 
+    npm install
     ```
 
 ## Usage
